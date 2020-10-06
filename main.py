@@ -1,32 +1,18 @@
-#! /home/atmosmaciel/.workzone-python-virtual-envs/env-pygame/bin/python
 # -*- coding: utf-8 -*-
 
-# PingPong Game!
-# By: atmosmaciel.github.io
 
 # Our Games Imports
-import sys
-import os
-import time
 import pygame
 
+pygame.init()
+screen = pygame.display.set_mode((500, 500))
+done = False
+x=60
+y=60
 
-# Verificando erros de inicializacao
-check_errors = pygame.init()
-if check_errors[1] > 0:
-    print("(!) Ops, {0} o Pygame iniciou com algum problema..." . format(check_errors[1]))
-    sys.exit(-1)
-else:
-    print("(+) O Pygame foi inicializado com sucesso!")
-
-
-# Global Variables
-color = pygame.Color(255, 255, 255, 255)  # background
-width = 700
-height = 700
-size = (width, height)
-
-# Play surface
-playSurface = pygame.display.set_mode(size)
-pygame.display.set_caption("PingPong Game!")
-time.sleep(10)
+while not done:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                done = True
+        pygame.draw.rect(screen, (0,128,255), pygame.Rect(x, y, 90, 90))        
+        pygame.display.flip()
