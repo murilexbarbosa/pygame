@@ -25,6 +25,7 @@ while not done:
     pygame.display.flip()
 
     is_red = True
+    color = (255, 0, 0)
     #in infinite while loop:-
     if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         pressed = pygame.key.get_pressed()
