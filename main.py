@@ -7,7 +7,7 @@ from pygame import mixer
 
 pygame.init()
 mixer.init()
-screen = pygame.display.set_mode((500, 500))
+screen = pygame.display.set_mode((500, 400))
 done = False
 x=60
 y=60
@@ -27,6 +27,7 @@ while not done:
     is_red = True
     color = (255, 0, 0)
     #in infinite while loop:-
+    
     if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_UP]: 
